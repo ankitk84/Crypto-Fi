@@ -114,6 +114,7 @@ const Chart = ({id, profit}) => {
     let {currency} = useContext(CryptoContext);
     // eslint-disable-next-line
     const [days, setDays] = useState(7);
+    // eslint-disable-next-line
     const [type, setType] = useState("prices");
     // eslint-disable-next-line no-unused-vars
     // const[valper, setValper] = useState([]);
