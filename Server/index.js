@@ -29,7 +29,8 @@ require("./Modals/OrderBook")
 app.use(
     cors({
      origin: [
-        "http://localhost:3000"
+        "http://localhost:3000",
+        "https://main--crypto-fi.netlify.app"
         
       ],
       credentials: true,
