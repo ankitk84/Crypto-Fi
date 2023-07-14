@@ -72,9 +72,9 @@ router.post("/signin", async (req, res) => {
 
             res.cookie("jwtoken",token,{
                 expires:new Date(Date.now()+259200000),
-                // httpOnly:true,
+                httpOnly:false,
                 // credentials:'include',
-                secure:true,
+                // secure:true,
             });
 
             res.json({message:"Successfully signed in"})}
