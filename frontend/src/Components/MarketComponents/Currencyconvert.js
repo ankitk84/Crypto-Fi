@@ -67,7 +67,12 @@ const Currencyconvert = () => {
       const response = await fetch('http://localhost:8000/buyOrder', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
+          
+          secure: true,
+          httpOnly: true,
+          withCredentials: true,
+          sameSite: "lax",
         },
         body: JSON.stringify(Coin)
       });
@@ -96,7 +101,12 @@ const Currencyconvert = () => {
       const response = await fetch('http://localhost:8000/SellOrder', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
+          
+          secure: true,
+          httpOnly: true,
+          withCredentials: true,
+          sameSite: "lax",
         },
         body: JSON.stringify(Coin)
       });
