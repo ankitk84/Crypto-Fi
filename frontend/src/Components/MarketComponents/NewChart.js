@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useState, useContext,useEffect, useRef} from 'react'
+import React, {useLayoutEffect,useState, useContext} from 'react'
 import ApexCharts from 'apexcharts';
 import { CryptoContext } from './CryptoContext';
 
@@ -36,7 +36,7 @@ import { CryptoContext } from './CryptoContext';
 //     return <div ref={chartRef} />;
 //   };
 
-const LineChartComponent = ({ data, currency, type }) => {
+const LineChartComponent = ({ data,  type }) => {
   const chartRef = React.useRef(null);
   const [chartType, setChartType] = useState("line");
  
@@ -130,6 +130,7 @@ const NewChart = ({id}) => {
         };
     
         getChartData(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [id, days, type]);
 
   return (

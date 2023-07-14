@@ -1,5 +1,5 @@
 import React from 'react'
-import PieChart from '../MarketComponents/PieChart'
+// import PieChart from '../MarketComponents/PieChart'
 import BuyBarChart from '../MarketComponents/BuyBarhart'
 import SellBarChart from '../MarketComponents/SellBarChart'
 import Saved from '../MarketComponents/Saved'

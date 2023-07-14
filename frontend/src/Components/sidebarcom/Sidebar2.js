@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 // import Trending from "../pages/Trending";
 import About from "../pages/About";
-import Featured from "../pages/Featured";
-import Portfolio from "../pages/Portfolio";
+// import Featured from "../pages/Featured";
+// import Portfolio from "../pages/Portfolio";
 // import News from "../pages/News";
 import "./Sidebar2.css";
 

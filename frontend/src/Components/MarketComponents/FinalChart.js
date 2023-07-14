@@ -1,9 +1,9 @@
-import React, {useLayoutEffect, useState, useContext,useEffect, useRef} from 'react'
+import React, {useLayoutEffect, useState, useContext} from 'react'
 import ApexCharts from 'apexcharts';
 import { CryptoContext } from './CryptoContext';
 
 
-const LineChartComponent = ({ data, currency, type, chartType }) => {
+const LineChartComponent = ({ data, type, chartType }) => {
     const chartRef = React.useRef(null);   
     useLayoutEffect(() => {
       if (chartRef.current && data) {

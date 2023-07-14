@@ -1,27 +1,27 @@
 import React, {useLayoutEffect, useState, useContext} from 'react'
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Tooltip, Legend, Area, AreaChart } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 import { CryptoContext } from './CryptoContext';
 
 
 
-function CustomTooltip({ payload, label, active, currency= "usd" }) {
-  if (active && payload && payload.length > 0) {
-    return (
-      <div className="custom-tooltip">
-        <p className="label text-sm text-cyan">{`${label} : ${new Intl.NumberFormat(
-          "en-IN",
-          {
-            style: "currency",
-            currency: currency,
-            minimumFractionDigits: 5,
-          }
-        ).format(payload[0].value)}`}</p>
-      </div>
-    );
-  }
+// function CustomTooltip({ payload, label, active, currency= "usd" }) {
+//   if (active && payload && payload.length > 0) {
+//     return (
+//       <div className="custom-tooltip">
+//         <p className="label text-sm text-cyan">{`${label} : ${new Intl.NumberFormat(
+//           "en-IN",
+//           {
+//             style: "currency",
+//             currency: currency,
+//             minimumFractionDigits: 5,
+//           }
+//         ).format(payload[0].value)}`}</p>
+//       </div>
+//     );
+//   }
 
-  return null;
-  }
+//   return null;
+//   }
 
 const LineChartComponent = ({data, currency, type}) => {
     return (
@@ -47,28 +47,28 @@ const LineChartComponent = ({data, currency, type}) => {
     );
 }
 
-const AreaChartComponent = ({data}) => {
-    return (
-      <AreaChart width={730} height={250} data={data}
-  margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-  <defs>
-    {/* <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
-      <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
-    </linearGradient> */}
-    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
-      <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
-    </linearGradient>
-  </defs>
-  {/* <XAxis dataKey="date" /> */}
-  <YAxis hide domain={"auto"} />
-  {/* <CartesianGrid strokeDasharray="3 3" /> */}
-  <Tooltip />
-  <Area type="monotone" dataKey="prices" stroke="#8884d8" fillOpacity={1} fill="url(#colorPv)" />
+// const AreaChartComponent = ({data}) => {
+//     return (
+//       <AreaChart width={730} height={250} data={data}
+//   margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+//   <defs>
+//     {/* <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+//       <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
+//       <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
+//     </linearGradient> */}
+//     <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+//       <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
+//       <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
+//     </linearGradient>
+//   </defs>
+//   {/* <XAxis dataKey="date" /> */}
+//   <YAxis hide domain={"auto"} />
+//   {/* <CartesianGrid strokeDasharray="3 3" /> */}
+//   <Tooltip />
+//   <Area type="monotone" dataKey="prices" stroke="#8884d8" fillOpacity={1} fill="url(#colorPv)" />
 
-</AreaChart>
-    )};
+// </AreaChart>
+//     )};
 
 
 

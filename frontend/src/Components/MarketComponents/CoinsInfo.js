@@ -1,13 +1,13 @@
 import React, { useEffect, useState , useContext} from 'react'
-import  {createPortal} from 'react-dom';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+// import  {createPortal} from 'react-dom';
+import {   useParams } from 'react-router-dom';
 import { CryptoContext } from './CryptoContext';
-import Chart from './Chart';
-import NewChart from './NewChart';
-import CandleChart from './CandleChart';
-import Buy from './Buy';
-import { Sidebar2 } from '../sidebarcom/Sidebar2';
-import NavbarWrapper from '../pages/NavbarWrapper';
+// import Chart from './Chart';
+// import NewChart from './NewChart';
+// import CandleChart from './CandleChart';
+// import Buy from './Buy';
+// import { Sidebar2 } from '../sidebarcom/Sidebar2';
+// import NavbarWrapper from '../pages/NavbarWrapper';
 
 const HighLowIndicator = ({ currentPrice, high, low }) => {
     const [green, setGreen] = useState();
@@ -38,7 +38,7 @@ const HighLowIndicator = ({ currentPrice, high, low }) => {
 
 const CoinsInfo = () => {
     let {id} = useParams();
-    let navigate = useNavigate();
+    // let navigate = useNavigate();
     let {getCoinData, coinData:data, currency} = useContext(CryptoContext);
 
     
@@ -47,7 +47,7 @@ const CoinsInfo = () => {
          // eslint-disable-next-line react-hooks/exhaustive-deps
        console.log(id, 'coininfo');    
         getCoinData(id);
-      //  console.log(getCoinData,'id getcoin coininfo')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
     // const close = () => {

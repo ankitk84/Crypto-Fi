@@ -15,7 +15,7 @@ import Footer from './Components/Footer/Footer';
 import Dashboard from './Components/pages/Dashboard';
 import SignIn from './Components/pages/SignIn';
 import SignUp from './Components/pages/SignUp';
-import ForgotPassword from './Components/pages/ForgotPassword';
+// import ForgotPassword from './Components/pages/ForgotPassword';
 import Trending from './Components/pages/Trending';
 // import Crypto from './Components/MarketComponents/Crypto';
 // import CryptoDetails from './Components/MarketComponents/CryptoDetails';
@@ -24,10 +24,10 @@ import OrderBook from './Components/pages/OrderBook';
 // import NavbarC from './Components/navbar/NavbarComponent'
 import Saved from './Components/MarketComponents//Saved';
 import NavbarWrapper from '../src/Components/pages/NavbarWrapper';
-import CoinsInfo from '../src/Components/MarketComponents/CoinsInfo';
-import Buy from './Components/MarketComponents/Buy';
+// import CoinsInfo from '../src/Components/MarketComponents/CoinsInfo';
+// import Buy from './Components/MarketComponents/Buy';
 import FinalCoinsInfo from './Components/MarketComponents/FinalCoinsInfo';
-import Sell from './Components/MarketComponents/Sell';
+// import Sell from './Components/MarketComponents/Sell';
 import  Erros  from './Components/pages/Erros';
 import CheckStatus from './Components/pages/CheckStatus';
 import SignOut from './Components/pages/SignOut';
@@ -80,9 +80,9 @@ const AppRoutes = () => {
           </Route>
 
           
-          <Route path="/Dashboard/:id" element={<CoinsInfo id={id} />} />
-          <Route path="/:id/buy" element={<Buy/>}  />
-          <Route path="/:id/sell" element={<Sell/>}  />    
+          {/* <Route path="/Dashboard/:id" element={<CoinsInfo id={id} />} /> //working */}
+          {/* <Route path="/:id/buy" element={<Buy/>}  /> //working */}
+          {/* <Route path="/:id/sell" element={<Sell/>}  />     //working */}
           {/* <Route path="/:id" element={<CoinsInfo />} >
           <Route path="/:id/buy" element={<Buy/>}  /> 
             </Route> */}
@@ -97,7 +97,7 @@ const AppRoutes = () => {
         <Route path='/SignIn' element={<SignIn/>} />
         <Route path='/SignUp' element={<SignUp/>} />
         <Route path='/SignOut' element={<SignOut/>} />
-        <Route path='/ForgotPassword' element={<ForgotPassword/>} />
+        {/* <Route path='/ForgotPassword' element={<ForgotPassword/>} /> */}
         <Route path='/Dashboard'  Component={Dashboard} element={<Dashboard/>} />
         <Route path='/Trending' element={<Trending/>} />
         {/* <Route path='/Crypto' element={<h1>Crypto</h1>} />   */}

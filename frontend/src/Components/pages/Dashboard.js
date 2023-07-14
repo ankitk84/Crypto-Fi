@@ -5,7 +5,7 @@ import { Sidebar2 } from '../sidebarcom/Sidebar2'
 
 import "../../styles/global.css"
 
-import About from './About'
+// import About from './About'
 const Dashboard = () => {
   
   return (

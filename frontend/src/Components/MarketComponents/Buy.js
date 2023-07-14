@@ -81,12 +81,12 @@ import { CryptoContext } from './CryptoContext';
 const Buy = () => {
   let { id } = useParams();
   console.log(id, 'buy ');
-  let { getCoinData, coinData: data, currency } = useContext(CryptoContext);
+  let { getCoinData, coinData: data } = useContext(CryptoContext);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     console.log(id, 'buy id2 ');
     getCoinData(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const [Buycoin, setBuycoin] = useState({
@@ -94,8 +94,8 @@ const Buy = () => {
     rate: "",
     token: ""
   });
-  const [amountUsd, setAmountUsd] = useState('');
-  const [amountBtc, setAmountBtc] = useState('');
+  // const [amountUsd, setAmountUsd] = useState('');
+  // const [amountBtc, setAmountBtc] = useState('');
   const [conversionRate, setConversionRate] = useState(null);
   const [rate, setrate] = useState('');
   const [qty, setqty] = useState('');

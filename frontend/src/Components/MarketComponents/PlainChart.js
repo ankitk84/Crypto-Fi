@@ -1,5 +1,5 @@
 import React, {useLayoutEffect, useState, useContext} from 'react'
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer, Tooltip, Legend, Area, AreaChart } from 'recharts';
+import {  YAxis, Tooltip,  Area, AreaChart } from 'recharts';
 import { CryptoContext } from './CryptoContext';
 
 // function CustomTooltip({ payload, label, active, currency= "usd" }) {
@@ -21,39 +21,39 @@ import { CryptoContext } from './CryptoContext';
 //   return null;
 //   }
 
-const LineChartComponent = ({data, currency, type}) => {
-    return (
-        // <ResponsiveContainer height={"90%"}>
-        // <LineChart width={600} height={300} data={data}>
-        // <Line type="monotone" dataKey="prices" stroke="#8884d8" />
-        // </LineChart>
-        // </ResponsiveContainer>
-        <ResponsiveContainer 
-        // width={50} height={100}
-        >
-        <LineChart data={data}> 
-        <Line
-         type="monotone" 
-        dataKey={type}
-         stroke="#8884d8" />
-        <CartesianGrid stroke="#ccc" />
-        <XAxis
-        //  dataKey="date"
-          />
-        <YAxis  
-        // dataKey={type}
-         hide domain={["auto", "auto"]}
-         />
+// const LineChartComponent = ({data, currency, type}) => {
+//     return (
+//         // <ResponsiveContainer height={"90%"}>
+//         // <LineChart width={600} height={300} data={data}>
+//         // <Line type="monotone" dataKey="prices" stroke="#8884d8" />
+//         // </LineChart>
+//         // </ResponsiveContainer>
+//         <ResponsiveContainer 
+//         // width={50} height={100}
+//         >
+//         <LineChart data={data}> 
+//         <Line
+//          type="monotone" 
+//         dataKey={type}
+//          stroke="#8884d8" />
+//         <CartesianGrid stroke="#ccc" />
+//         <XAxis
+//         //  dataKey="date"
+//           />
+//         <YAxis  
+//         // dataKey={type}
+//          hide domain={["auto", "auto"]}
+//          />
         
         
-        <Tooltip 
-        currency={currency}/>
+//         <Tooltip 
+//         currency={currency}/>
 
-        </LineChart>
-        </ResponsiveContainer>
+//         </LineChart>
+//         </ResponsiveContainer>
 
-    );
-}
+//     );
+// // }
 
 // const AreaChartComponent = ({data}) => {
 
@@ -146,6 +146,7 @@ const Chart = ({id, profit}) => {
         };
     
         getChartData(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [id, days, type]);
 
   return (

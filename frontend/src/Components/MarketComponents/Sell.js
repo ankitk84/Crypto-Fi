@@ -7,12 +7,13 @@ import { CryptoContext } from './CryptoContext';
 const Sell = () => {
     let { id } = useParams();
   console.log(id, 'sell');
-  let { getCoinData, coinData: data, currency } = useContext(CryptoContext);
+  let { getCoinData, coinData: data } = useContext(CryptoContext);
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     console.log(id, 'Sell id2 ');
     getCoinData(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
   const [Sellcoin, setSellcoin] = useState({
     qty: "",
@@ -36,6 +37,7 @@ const Sell = () => {
       }
       ));
       setConversionRate(data.market_data.current_price.usd);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }
   }, [data]);
   const handleAmountUsdChange = (e) => {

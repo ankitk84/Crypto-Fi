@@ -2,11 +2,11 @@ import React, { useState ,useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 // import world from '../Assets/World'
 import PayCard from '../Card/PayCard'
-import OrderBook from './OrderBook';
+// import OrderBook from './OrderBook';
 import Portfolio from './Portfolio';
 import PieChart from '../MarketComponents/PieChart';
-import BuyBarChart from '../MarketComponents/BuyBarhart';
-import SellBarChart from '../MarketComponents/SellBarChart';
+// import BuyBarChart from '../MarketComponents/BuyBarhart';
+// import SellBarChart from '../MarketComponents/SellBarChart';
 
 const About = () => {
   

@@ -1,4 +1,4 @@
-import React, {useContext,useRef, useState} from 'react'
+import React, {useContext,useRef} from 'react'
 import { CryptoContext } from './CryptoContext';
 const Filters = () => {
     let { setCurrency, setSortBy } = useContext(CryptoContext);
