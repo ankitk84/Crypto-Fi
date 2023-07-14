@@ -26,16 +26,16 @@ require("./Modals/user")
 require("./Modals/Portfolio")
 require("./Modals/OrderBook")
 
-// app.use(
-//     cors({
-//      origin: [
-//         "http://localhost:3000",
-//         "https://main--crypto-fi.netlify.app"
+app.use(
+    cors({
+     origin: [
+        "http://localhost:3000",
+        "https://main--crypto-fi.netlify.app"
         
-//       ],
-//       credentials: true,
-//     })
-//   );
+      ],
+      credentials: true,
+    })
+  );
 
   // cors({
   //   origin: [
