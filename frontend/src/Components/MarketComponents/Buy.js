@@ -328,7 +328,8 @@ const Buy = ({ qty, rate, token }) => {
           'Accept': 'application/json'
 
         },
-        body: JSON.stringify({ qty, rate, token })
+        body: JSON.stringify({ qty, rate, token }),
+        credentials:"include"
       });
   
       const data = await response.json();

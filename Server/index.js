@@ -6,12 +6,16 @@ const cookieParser = require('cookie-parser');
 app.use(cookieParser ());
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader(
-        "Access-Control-Allow-Methods",
-        "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-    );
-     res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    // res.setHeader("Access-Control-Allow-Origin", "");
+    // res.setHeader(
+    //     "Access-Control-Allow-Methods",
+    //     "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+    // );
+    //  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+     res.setHeader('Access-Control-Allow-Credentials', 'true'); // Allow credentials
     next();
 });
 app.use(express.json())
@@ -26,16 +30,16 @@ require("./Modals/user")
 require("./Modals/Portfolio")
 require("./Modals/OrderBook")
 
-app.use(
-    cors({
-     origin: [
-        "http://localhost:3000",
-        "https://main--crypto-fi.netlify.app"
+// app.use(
+//     cors({
+//      origin: [
+//         "http://localhost:3000",
+//         "https://main--crypto-fi.netlify.app"
         
-      ],
-      credentials: true,
-    })
-  );
+//       ],
+//       credentials: true,
+//     })
+//   );
 
   // cors({
   //   origin: [
