@@ -37,8 +37,7 @@ const User = require('../Modals/user');
 const Authenticate = async (req, res, next) => {
   try {
     const token = req.cookies.jwtoken;
-    
-
+    console.log(token, 'zuth token')
     if (!token) {
       req.isLoggedIn = false; // Set the isLoggedIn flag to false
     //   return res.status(401).send('Unauthorized: No token provided');
