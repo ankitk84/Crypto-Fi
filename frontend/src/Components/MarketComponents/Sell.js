@@ -155,12 +155,14 @@ const Sell = ({ qty, rate, token }) => {
   const handleSell = async () => {
     // Handle sell action using the qty, rate, and token props
     try {
-      const response = await fetch('http://localhost:8000/SellOrder', {
+      const response = await fetch('http://localhost:8000/sellOrder', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify({ qty, rate, token })
+        body: JSON.stringify({ qty, rate, token }),
+        credentials:"include"
       });
   
       const data = await response.json();
