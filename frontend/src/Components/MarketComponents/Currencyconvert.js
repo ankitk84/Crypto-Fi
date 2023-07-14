@@ -1,6 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { CryptoContext } from './CryptoContext';
+import Buy from './Buy';
+import Sell from './Sell';
 
 const Currencyconvert = () => {
     let { id } = useParams();
@@ -64,7 +66,7 @@ const Currencyconvert = () => {
     // Perform buy action using the buyAmount state variable
     // e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/buyOrder', {
+      const response = await fetch('/buyOrder', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -86,6 +88,8 @@ const Currencyconvert = () => {
     } catch (error) {
       console.error('Error occurred while submitting Buycoin data:', error);
     }
+   
+  
   };
 
   const handleSell = async(qty, rate, token) => {
@@ -182,6 +186,9 @@ const Currencyconvert = () => {
                 >
                   Buy
                 </button>
+                <Buy qty={Coin.qty} rate={Coin.rate} token={Coin.token} />
+                <Sell qty={Coin.qty} rate={Coin.rate} token={Coin.token} />
+
                 <button
                   type="button"
                   className="btn btn-primary"
