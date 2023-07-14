@@ -112,8 +112,10 @@ const Chart = ({id, profit}) => {
 
     const [chartData, setChartData] = useState();
     let {currency} = useContext(CryptoContext);
+    // eslint-disable-next-line
     const [days, setDays] = useState(7);
     const [type, setType] = useState("prices");
+    // eslint-disable-next-line no-unused-vars
     // const[valper, setValper] = useState([]);
 
     useLayoutEffect(() => {
