@@ -94,8 +94,8 @@ const Buy = () => {
     rate: "",
     token: ""
   });
-  const [amountUsd, setAmountUsd] = useState('');
-  const [amountBtc, setAmountBtc] = useState('');
+  // const [amountUsd, setAmountUsd] = useState('');
+  // const [amountBtc, setAmountBtc] = useState('');
   const [conversionRate, setConversionRate] = useState(null);
   const [rate, setrate] = useState('');
   const [qty, setqty] = useState('');
