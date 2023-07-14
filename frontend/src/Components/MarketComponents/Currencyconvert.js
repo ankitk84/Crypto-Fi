@@ -64,7 +64,7 @@ const Currencyconvert = () => {
     // Perform buy action using the buyAmount state variable
     // e.preventDefault();
     try {
-      const response = await fetch('/buyOrder', {
+      const response = await fetch('http://localhost:8000/buyOrder', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
