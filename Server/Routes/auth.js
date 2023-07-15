@@ -71,9 +71,12 @@ router.post("/signin", async (req, res) => {
             res.status(422).json({ error: "Invalid email or password" })
         }else{
 
+            // req.session.usertoken = token;
+            // console.log(req.session.usertoken, 'req.session.usertoken')
+            // sessionStorage.setItem('jwt', token);
             res.cookie("jwtoken",token,{
                 expires:new Date(Date.now()+259200000),
-                httpOnly:true,
+                // httpOnly:true,
                 credentials:'include',
                 secure:true,
                 sameSite:'none'
@@ -269,7 +272,9 @@ router.get("/logout",  (req, res) => {
     try {
         const userId = req.userId;
       const orders = await OrderBook.find({ userId: userId });
-      const response = await OrderBook.find({ userId: userId }).sort({ time: -1 });
+      console.log(userId, 'userId')
+      const response = await OrderBook.find({ userId: userId });
+      console.log(response, 'orderbook')
       // Send the order book data as the response
       res.status(200).json({ success: true, data: orders });
     } catch (err) {

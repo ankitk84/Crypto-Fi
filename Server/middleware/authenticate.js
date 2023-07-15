@@ -37,6 +37,9 @@ const User = require('../Modals/user');
 const Authenticate = async (req, res, next) => {
   try {
     const token = req.cookies.jwtoken;
+    //const token = req.session.usertoken;
+    // const token = sessionStorage.getItem('jwt');
+
     console.log(token, 'auth token')
     if (!token) {
       req.isLoggedIn = false; // Set the isLoggedIn flag to false

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require("cors");
 const cookieParser = require('cookie-parser');
 app.use(cookieParser ());
-
+const session = require('express-session');
 app.use((req, res, next) => {
     // res.setHeader("Access-Control-Allow-Origin", "");
     // res.setHeader(
@@ -31,6 +31,21 @@ require("./Modals/Portfolio")
 require("./Modals/OrderBook")
 
 app.use(
+  session({
+    secret: "env.SECRET_KEY",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false,
+        httpOnly: false,
+        maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
+        sameSite: "none",
+    },
+    rolling: true,
+
+  })
+  );
+
+app.use(
     cors({
      origin: [
         "http://localhost:3000",
@@ -50,6 +65,11 @@ app.use(
 //setup routes
 app.use(require("./Routes/auth"));
 app.use(require("./Routes/userDetails"));
+app.get('/',(req,res)=>{
+  res.send("hello")
+}
+)
+
 
 const PORT = process.env.PORT || 8000
 
