@@ -64,7 +64,7 @@ router.post("/signin", async (req, res) => {
     if (userexist) {
         const isMatch = await bcrypt.compare(password, userexist.password);
         const token = await userexist.generateAuthToken();
-        console.log(token);
+        console.log(token, 'signin token');
 
         
         if (!isMatch) {
@@ -76,7 +76,7 @@ router.post("/signin", async (req, res) => {
             // sessionStorage.setItem('jwt', token);
             res.cookie("jwtoken",token,{
                 expires:new Date(Date.now()+259200000),
-                // httpOnly:true,
+                httpOnly:true,
                 credentials:'include',
                 secure:true,
                 sameSite:'none'
