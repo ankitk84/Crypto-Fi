@@ -269,6 +269,7 @@ router.get("/logout",  (req, res) => {
     try {
         const userId = req.userId;
       const orders = await OrderBook.find({ userId: userId });
+      const response = await OrderBook.find({ userId: userId }).sort({ time: -1 });
       // Send the order book data as the response
       res.status(200).json({ success: true, data: orders });
     } catch (err) {
