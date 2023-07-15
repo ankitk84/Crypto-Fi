@@ -37,14 +37,19 @@ const SignIn = () => {
       })
     });
 
+    const data = await res.json();
+    console.log(data,'sdata')
     if (res.status === 422 || !res) {
       window.alert("something went wrong");
       console.log("login failed");
     }else{
+      
+      console.log(data,'data');
+      localStorage.setItem('token',data.token);
       window.alert("login Successfull");
       console.log("login Successfull");
       
-      navigate('/Dashboard');
+      navigate('/');
     }
   };
 

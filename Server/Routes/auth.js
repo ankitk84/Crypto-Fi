@@ -12,6 +12,8 @@ const nodemailer = require("nodemailer")
 const requiredLogin = require("../middleware/requireLogin")
 const Authenticate = require("../middleware/authenticate")
 const bodyParser = require("body-parser"); router.use(bodyParser.json());
+const { LocalStorage } = require('node-localstorage');
+const localStorage = new LocalStorage('./scratch');
 
 router.post("/signup", (req, res) => {
 
@@ -74,6 +76,11 @@ router.post("/signin", async (req, res) => {
             // req.session.usertoken = token;
             // console.log(req.session.usertoken, 'req.session.usertoken')
             // sessionStorage.setItem('jwt', token);
+            // console.log(sessionStorage.getItem('jwt'), 'sessionStorage.getItem(jwt)')
+            // console.log(req.session.usertoken, 'req.session.usertoken')
+
+          localStorage.setItem('jwtoken', token);
+
             res.cookie("jwtoken",token,{
                 expires:new Date(Date.now()+259200000),
                 httpOnly:true,
@@ -82,7 +89,7 @@ router.post("/signin", async (req, res) => {
                 sameSite:'none'
             });
 
-            res.json({message:"Successfully signed in"})}
+           return res.json({message:"Successfully signed in", token:token})}
         } else {
             res.status(422).json({ error: "Invalid email or password" })
         }
@@ -198,6 +205,7 @@ router.post("/forgotpassword",(req,res)=>{
 router.get("/about",Authenticate,(req,res)=>{
     // console.log("about page working");
     res.send(req.rootUser);
+    
 });
 
 

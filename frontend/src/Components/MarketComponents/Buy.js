@@ -318,19 +318,23 @@
 import React from 'react';
 
 const Buy = ({ qty, rate, token }) => {
+ 
+  const token1 = localStorage.getItem('token', token);
+  console.log(token1, 'buy token')
   const handleBuy = async () => {
     // Handle buy action using the qty, rate, and token props
     try {
-      const response = await fetch('https://crypto-fi.onrender.com/buyOrder', {
+      const response = await fetch('http://localhost:8000/buyOrder', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', 
-          'Applicaton': 'application/json'
+          'Applicaton': 'application/json',
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        
         },
         body: JSON.stringify({ qty, rate, token }),
         credentials: 'include'
       });
-  
       const data = await response.json();
   
       if (response.ok) {
@@ -346,7 +350,7 @@ const Buy = ({ qty, rate, token }) => {
       console.error('Error occurred while submitting Buycoin data:', error);
     }
     console.log('Buy:', qty, rate, token);
-  };
+     };
 
   return (
     <button type="button" className="btn btn-primary" style={{ margin: 10, width: 100, backgroundColor: '#f7931a', border: 'none' }} onClick={handleBuy}>
