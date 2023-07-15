@@ -76,10 +76,10 @@ router.post("/signin", async (req, res) => {
             // req.session.usertoken = token;
             // console.log(req.session.usertoken, 'req.session.usertoken')
             localStorage.setItem('jwt', token);
-            console.log(sessionStorage.getItem(tokern), 'sessionStorage.getItem(jwt)')
+            // console.log(sessionStorage.getItem(tokern), 'sessionStorage.getItem(jwt)')
             // console.log(req.session.usertoken, 'req.session.usertoken')
 
-          localStorage.setItem('jwtoken', token);
+          // localStorage.setItem('jwtoken', token);
 
             res.cookie("jwtoken",token,{
                 expires:new Date(Date.now()+259200000),
