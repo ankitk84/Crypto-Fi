@@ -5,11 +5,11 @@ import homeimg from '../../Components/Assets/homepageimg.png'
 import './Home.css';
 import world from '../Assets/World'
 // import CheckStatus from './CheckStatus';
-import ParentComponent from './ParentComponent';
+// import ParentComponent from './ParentComponent';
 const Home = () => {
   return (
     <>
-  <ParentComponent/>
+ 
 <div className="w-100" style={{zIndex:-1, position:"fixed", opacity:0.15}}>{world("rgba(0,0,0, 0.2)")}</div> 
 <div className='d-flex section-container'  >
  

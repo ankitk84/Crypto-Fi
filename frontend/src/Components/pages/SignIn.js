@@ -49,7 +49,7 @@ const SignIn = () => {
       window.alert("login Successfull");
       console.log("login Successfull");
       
-      navigate('/');
+      navigate('/Dashboard');
     }
   };
 

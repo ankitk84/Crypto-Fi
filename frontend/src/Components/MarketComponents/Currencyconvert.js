@@ -179,25 +179,25 @@ const Currencyconvert = () => {
             
               <div className="buttons-container" >
                <div style={{marginLeft:30}}>
-               <button
+               {/* <button
                   type="button"
                   className="btn btn-primary"
                   style={{margin:10, width:100, backgroundColor:"#f7931a", border:"none"}} 
                   onClick={() => handleBuy(Coin.qty, Coin.rate, Coin.token)}
                 >
                   Buy
-                </button>
+                </button> */}
                 <Buy qty={Coin.qty} rate={Coin.rate} token={Coin.token} />
                 <Sell qty={Coin.qty} rate={Coin.rate} token={Coin.token} />
 
-                <button
+                {/* <button
                   type="button"
                   className="btn btn-primary"
                   style={{margin:10, width:100, backgroundColor:"#f7931a", border:"none"}}
                   onClick={() => handleSell(qty, rate, Coin.token)}
                 >
                   Sell
-                </button>
+                </button> */}
                </div>
               </div>
             </div>

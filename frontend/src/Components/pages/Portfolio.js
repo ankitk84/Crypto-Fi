@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
+import Portfolio from './Portfolio';
 const Portfolio = () => {
   const navigate = useNavigate();
     const[Portfolio, setPortfolio] = useState({ data: { _id: '', walletBalance: '', Positions:[] } });
@@ -50,6 +51,8 @@ const Portfolio = () => {
     <>
     <div style={{color:"black", margin:50}}>
     <div>Portfolio</div>
+    <Portfolio />
+
     {/* <p>{Portfolio.data._id}</p>  */}
          <p style={{marginBottom:20}}>Remaining walletBalance:
            {/* {Portfolio.data.walletBalance} */}
