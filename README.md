@@ -4,14 +4,15 @@
 https://main--crypto-fi.netlify.app/
 
 ## Technologies Used
-1- HTML,CSS,Bootstarp
-2- ReactJs
-3- NodeJS
-4- expressjs
-5- MongoDB
-6- Git
-7.  JWT
-8.  Nodemailer #remaining
+1. HTML,CSS,Bootstarp
+2. ReactJs with libraries like apexcharts,recharts
+3. NodeJS
+4. expressjs
+5. MongoDB
+6. Git
+7. JWT
+8. Nodemailer #remaining
+9. websocket
 
 ## Prerequisites
 - HTML,CSS,Bootstarp
@@ -20,7 +21,6 @@ https://main--crypto-fi.netlify.app/
 - expressjs
 - MongoDB
 - Git
-
 - CLI
 
 ## Installation
