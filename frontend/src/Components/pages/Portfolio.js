@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
-import Portfolio from './Portfolio';
+import Parentcomponent from './Parentcomponent';
 const Portfolio = () => {
   const navigate = useNavigate();
     const[Portfolio, setPortfolio] = useState({ data: { _id: '', walletBalance: '', Positions:[] } });
