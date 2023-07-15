@@ -62,65 +62,65 @@ const Currencyconvert = () => {
     }));  
   };
 
-  const handleBuy = async (qty, rate, token) => {
-    // Perform buy action using the buyAmount state variable
-    // e.preventDefault();
-    try {
-      const response = await fetch('/buyOrder', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-           'Authorization': `Bearer ${localStorage.getItem('token')}`
-        },
-        body: JSON.stringify(Coin)
-      });
+  // const handleBuy = async (qty, rate, token) => {
+  //   // Perform buy action using the buyAmount state variable
+  //   // e.preventDefault();
+  //   try {
+  //     const response = await fetch('/buyOrder', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //          'Authorization': `Bearer ${localStorage.getItem('token')}`
+  //       },
+  //       body: JSON.stringify(Coin)
+  //     });
   
-      const data = await response.json();
+  //     const data = await response.json();
   
-      if (response.ok) {
-        // POST request successful
-        console.log(data.message,'Buycoin data submitted successfully');
-        console.log(data); // Response data from the server
-      } else {
-        // Handle error cases
-        console.error('Failed to submit Buycoin data');
-        console.error(data); // Error message from the server
-      }
-    } catch (error) {
-      console.error('Error occurred while submitting Buycoin data:', error);
-    }
+  //     if (response.ok) {
+  //       // POST request successful
+  //       console.log(data.message,'Buycoin data submitted successfully');
+  //       console.log(data); // Response data from the server
+  //     } else {
+  //       // Handle error cases
+  //       console.error('Failed to submit Buycoin data');
+  //       console.error(data); // Error message from the server
+  //     }
+  //   } catch (error) {
+  //     console.error('Error occurred while submitting Buycoin data:', error);
+  //   }
    
   
-  };
+  // };
 
-  const handleSell = async(qty, rate, token) => {
-    // Perform sell action using the sellAmount state variable
-    // e.preventDefault();
+  // const handleSell = async(qty, rate, token) => {
+  //   // Perform sell action using the sellAmount state variable
+  //   // e.preventDefault();
   
-    try {
-      const response = await fetch('/SellOrder', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(Coin)
-      });
+  //   try {
+  //     const response = await fetch('/SellOrder', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify(Coin)
+  //     });
   
-      const data = await response.json();
+  //     const data = await response.json();
   
-      if (response.ok) {
-        // POST request successful
-        console.log(data.message,'Sellcoin data submitted successfully');
-        console.log(data); // Response data from the server
-      } else {
-        // Handle error cases
-        console.error('Failed to submit Sellcoin data');
-        console.error(data); // Error message from the server
-      }
-    } catch (error) {
-      console.error('Error occurred while submitting Sellcoin data:', error);
-    }
-  };
+  //     if (response.ok) {
+  //       // POST request successful
+  //       console.log(data.message,'Sellcoin data submitted successfully');
+  //       console.log(data); // Response data from the server
+  //     } else {
+  //       // Handle error cases
+  //       console.error('Failed to submit Sellcoin data');
+  //       console.error(data); // Error message from the server
+  //     }
+  //   } catch (error) {
+  //     console.error('Error occurred while submitting Sellcoin data:', error);
+  //   }
+  // };
   return (
     <>
     <div className=" ">
