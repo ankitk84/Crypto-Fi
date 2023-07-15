@@ -35,7 +35,7 @@ app.use(
      origin: [
         "http://localhost:3000",
         "https://main--crypto-fi.netlify.app",
-        "https://crypto-fi.onrender.com"
+        "https://crypto-fi.onrender.com/"
         
       ],
       credentials: true,
