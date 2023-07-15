@@ -6,11 +6,12 @@ const Portfolio = () => {
 
     const callPortfolio = async () => {
         try {
-          const res = await fetch("http://localhost:8000/portfolio", {
+          const res = await fetch("https://crypto-fi.onrender.com/portfolio", {
             method: "GET",
             headers: {
               Accept: "application/json",
-              "Content-Type": "application/json"
+              "Content-Type": "application/json",
+              'Authorization': `Bearer ${localStorage.getItem('token')}`
             },
             credentials:"include"
           });

@@ -154,12 +154,14 @@ import React from 'react';
 const Sell = ({ qty, rate, token }) => {
   const handleSell = async () => {
     // Handle sell action using the qty, rate, and token props
+    
     try {
-      const response = await fetch('http://localhost:8000/sellOrder', {
+      const response = await fetch('https://crypto-fi.onrender.com/sellOrder', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Accept': 'application/json',
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
         body: JSON.stringify({ qty, rate, token }),
         credentials:"include"

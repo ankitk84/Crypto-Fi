@@ -247,11 +247,12 @@ const OrderBook = () => {
 
   const callOrderBook = async () => {
     try {
-      const res = await fetch("http://localhost:8000/orderbook", {
+      const res = await fetch("https://crypto-fi.onrender.com/orderbook", {
         method: "GET",
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
         credentials: "include"
       });
@@ -326,6 +327,7 @@ const OrderBook = () => {
     // setTotalBuy(totalBuyAmount);
     // setTotalSell(totalSellAmount);
     setTotalValues(totalBuyAmount, totalSellAmount);
+    console.log(totalBuyAmount, totalSellAmount, 'totalBuyAmount, totalSellAmount')
     // TotalContext.Consumer((context) => {
     //   context.setTotalValues(totalBuyAmount, totalSellAmount);
     // });
