@@ -265,7 +265,7 @@ router.get("/logout",  (req, res) => {
   });
 
 
-  router.get('/orderbook',Authenticate, async (req, res) => {
+  router.get('/orderbook', async (req, res) => {
     try {
         const userId = req.userId;
       const orders = await OrderBook.find({ userId: userId });
@@ -275,6 +275,7 @@ router.get("/logout",  (req, res) => {
       res.status(500).json({ success: false, message: err.message });
     }
   });
+
 
 
 module.exports = router
