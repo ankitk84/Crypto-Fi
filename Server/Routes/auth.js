@@ -75,8 +75,8 @@ router.post("/signin", async (req, res) => {
 
             // req.session.usertoken = token;
             // console.log(req.session.usertoken, 'req.session.usertoken')
-            sessionStorage.setItem('jwt', token);
-            console.log(sessionStorage.getItem('jwt'), 'sessionStorage.getItem(jwt)')
+            localStorage.setItem('jwt', token);
+            console.log(sessionStorage.getItem(tokern), 'sessionStorage.getItem(jwt)')
             // console.log(req.session.usertoken, 'req.session.usertoken')
 
           localStorage.setItem('jwtoken', token);

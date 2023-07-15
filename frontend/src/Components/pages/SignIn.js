@@ -21,7 +21,7 @@ const SignIn = () => {
   const login = async (e) => {
     e.preventDefault();
     const { email, password } = User;
-    const res = await fetch("http://localhost:8000/signin", {
+    const res = await fetch("https://crypto-fi.onrender.com/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
