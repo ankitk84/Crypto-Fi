@@ -34,7 +34,8 @@ app.use(
     cors({
      origin: [
         "http://localhost:3000",
-        "https://main--crypto-fi.netlify.app"
+        "https://main--crypto-fi.netlify.app",
+        "https://crypto-fi.onrender.com"
         
       ],
       credentials: true,
@@ -53,8 +54,10 @@ app.use(require("./Routes/userDetails"));
 const PORT = process.env.PORT || 8000
 
 
+
 app.listen(PORT,()=>{
     console.log("CONNECTED TO SERVER")
+    console.log(`Server is running on port ${PORT}`)
 }
 )
 

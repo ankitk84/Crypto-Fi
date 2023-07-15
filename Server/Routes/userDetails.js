@@ -90,7 +90,7 @@ router.post("/sellOrder",Authenticate, async (req, res) => {
     //decrease holdings by qty
 });
 
-router.post("https://crypto-fi.onrender.com/buyOrder",Authenticate, async (req, res) => {
+router.post("/buyOrder",Authenticate, async (req, res) => {
     const userId = req.userId;
     const { qty, token, rate } = req.body;
     console.log(qty, token, rate, userId);

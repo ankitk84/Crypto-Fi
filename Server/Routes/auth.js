@@ -15,6 +15,7 @@ const bodyParser = require("body-parser"); router.use(bodyParser.json());
 
 router.post("/signup", (req, res) => {
 
+  console.log("okkkk")
     
     const { name, email, password,cpassword } = req.body
     if (!email || !password || !name || !cpassword) {
@@ -87,6 +88,10 @@ router.post("/signin", async (req, res) => {
     }
 
 
+router.get("/ok", (req, res) => {
+    console.log("okkkk")
+    res.send("okkkk")
+})
 
 
     // if (rooms) {
