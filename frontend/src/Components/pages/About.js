@@ -80,7 +80,7 @@ const About = () => {
 
     
     <div style={{display:"flex", flexWrap:"wrap"}}>
-    <div style={{ marginTop:50, margin:50,  marginBottom:20}}>
+    <div style={{ marginTop:50, margin:70,marginLeft:150,  marginBottom:20}}>
     <PayCard 
                number={getShortId(aboutUserData._id)}
               // number={aboutUserData._id}
