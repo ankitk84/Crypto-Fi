@@ -321,7 +321,7 @@ const Buy = ({ qty, rate, token }) => {
   const handleBuy = async () => {
     // Handle buy action using the qty, rate, and token props
     try {
-      const response = await fetch('http://localhost:8000/buyOrder', {
+      const response = await fetch('https://crypto-fi.onrender.com/buyOrder', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', 
