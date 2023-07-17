@@ -24,10 +24,10 @@
     }
   
     .page-content {
-        /* margin-left: 150px;
-        width: auto; */
+        /* margin-left: auto; */
+        /* width: auto; */
+        margin-left: 40rem;
         /* margin: auto; */
-     
       transition: 0.4s;
     }
   }
@@ -73,6 +73,7 @@
     .nav {
       position: fixed;
       left: 0;
+      margin-right: 4px;
       background-color: var(--container-color);
       box-shadow: 1px 0 4px hsla(228, 81%, 49%, 0.15);
       /* width: 84px; */
@@ -130,8 +131,9 @@
     }
   
     .page-content {
-      /* margin-left: 84px; */
-      margin-left: 0px;
+      margin-left: 84px;
+      /* margin-left: auto;
+      margin-right: auto; */
       /* justify-content: center; */
       /* margin-right: auto; */
       /* width: auto; */

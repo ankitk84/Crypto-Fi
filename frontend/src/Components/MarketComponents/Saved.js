@@ -76,7 +76,7 @@ const Saved = () => {
     <> 
     {savedData ? (
         <TableContainer component={Paper} className="mt-0 p-3">
-          <p style={{textAlign:"center", marginBottom:20}}>Saved</p>
+          <h3 style={{textAlign:"center", marginBottom:20}}>Saved</h3>
           <Table sx={{ minWidth: 500 }} aria-label="caption table">
             <TableHead>
               <TableRow className="border">

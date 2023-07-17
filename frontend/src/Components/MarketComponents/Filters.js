@@ -17,9 +17,14 @@ const Filters = () => {
     let val = e.target.value;
     setSortBy(val);
   };
+
+  
+
   return (
-    <>
-      <div className='d-flex mt-5 ' style={{ justifyContent: 'right', marginRight: 200 }}>
+    <>   
+    
+    <div style={{maxWidth:650, marginLeft:"auto",zIndex:-1,  textAlign:"center"}}>
+      <div className=' mt-5 mx-5 py-3' style={{ color:"black",flexWrap:"wrap", display:"flex", minWidth:"maxContent"}}>
         <form
           className="relative flex items-center font-nunito
           
@@ -39,9 +44,9 @@ const Filters = () => {
             name="currency"
             ref={currencyRef}
             placeholder="usd"
-            className="w-16 rounded bg-gray-200 placeholder:text-gray-100
-     pl-2 required outline-0 border border-transparent 
-     focus:border-cyan leading-4
+            className="mx-2 mt-2  bg-gray-200 
+     pl-2 required outline-0 border border-1 
+      leading-4
      "
           />
           {/* <button type="submit" className="ml-1 cursor-pointer">
@@ -49,15 +54,15 @@ const Filters = () => {
           </button> */}
         </form>
 
-        <label className="relative flex justify-center items-center">
-          <span className="font-bold mr-2">sort by: </span>
-          <select
-            name="sortby"
-            className="rounded bg-gray-200 text-base 
-pl-2 pr-10 py-0.5 leading-4 capitalize focus:outline-0
-"
-            onClick={handleSort}
-          >
+        <label className="relative flex justify-center items-center"  >
+          <span className=" mr-2">Sort by: </span>
+            <select
+              name="sortby"
+              className="mx-2 text-base mt-2  p-0.5  border border-1 leading-4 capitalize "    
+             
+              onClick={handleSort}
+
+            >
             <option value="market_cap_desc">market cap desc</option>
             <option value="market_cap_asc">market cap asc</option>
             <option value="volume_desc">volume desc</option>
@@ -67,14 +72,15 @@ pl-2 pr-10 py-0.5 leading-4 capitalize focus:outline-0
             <option value="gecko_desc">gecko desc</option>
             <option value="gecko_asc">gecko asc</option>
           </select>
-          <img
+          {/* <img
             src="#"
             alt="submit"
             className="w-[1rem] h-auto
 absolute right-1 top-2 pointer-events-none
 "
-          />
+          /> */}
         </label>
+      </div>
       </div>
     </>
   )

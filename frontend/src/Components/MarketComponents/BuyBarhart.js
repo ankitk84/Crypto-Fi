@@ -121,14 +121,27 @@ const BuyBarChart = () => {
         setOrderBook(data.data);
         const buyData = [];
         const xAxisCategories = [];
+        
+        // data.data.forEach(dataItem => {
+        //   if (dataItem.Type === 'buy') {
 
+        //     buyData.push(dataItem.rate);
+        //     xAxisCategories.push(new Date(dataItem.time).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: '2-digit' }));
+        //   }
+        // });
+        const dateBuyMap = new Map();
         data.data.forEach(dataItem => {
           if (dataItem.Type === 'buy') {
-            buyData.push(dataItem.rate);
-            xAxisCategories.push(new Date(dataItem.time).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: '2-digit' }));
+            const date = new Date(dataItem.time).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: '2-digit' });
+            const cumulativeBuyValue = dateBuyMap.get(date) || 0;
+            dateBuyMap.set(date, cumulativeBuyValue + dataItem.rate);
           }
         });
-
+  
+        dateBuyMap.forEach((value, date) => {
+          buyData.push(value);
+          xAxisCategories.push(date);
+        });
         // setChartOptions({
         //   chart: {
         //     width: '100%',

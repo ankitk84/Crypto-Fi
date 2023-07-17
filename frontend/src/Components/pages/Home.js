@@ -4,15 +4,13 @@ import Footer from '../Footer/Footer';
 import homeimg from '../../Components/Assets/homepageimg.png'
 import './Home.css';
 import world from '../Assets/World'
-import Box from './box'
 
 // import CheckStatus from './CheckStatus';
 // import ParentComponent from './ParentComponent';
 const Home = () => {
   return (
     <>
-  
- <Box />
+
 <div className="w-100" style={{zIndex:-1, position:"fixed", opacity:0.15}}>{world("rgba(0,0,0, 0.2)")}</div> 
 <div className='d-flex section-container'  >
  

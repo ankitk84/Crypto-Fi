@@ -167,7 +167,7 @@ const ParentComponent = () => {
     const { totalBuy, totalSell } = useContext(TotalContext);
   return (
     <>
-    <div>ParentComponent</div>
+    {/* <div>ParentComponent</div> */}
     <div className="mt-3">
               <div>Total Buy: {totalBuy}</div>
               <div>Total Sell: {totalSell}</div>

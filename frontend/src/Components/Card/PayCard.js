@@ -1,7 +1,7 @@
 import React from 'react'
 import chip from './chip.png'
 import logo from'./cryptofiwhite.png'
-import './reset.css'
+
 import './paycard.css'
 import world from './world'
 const PayCard = (props) => {

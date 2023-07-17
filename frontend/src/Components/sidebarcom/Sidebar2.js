@@ -32,7 +32,7 @@ export function Sidebar2() {
 
   return (
     <div style={{display:"flex",justifyContent:"center"}}>
-    <div className={isSidebarActive === true ? "nav show-menu" : "nav"} style={{zIndex:"3"}}  >
+    <div className={isSidebarActive === true ? "nav show-menu" : "nav"} style={{}}  >
       <nav className="nav__content">
         <div
           className={

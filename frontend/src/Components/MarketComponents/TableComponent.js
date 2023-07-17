@@ -7,11 +7,11 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { CryptoContext } from '../MarketComponents/CryptoContext';
-import { Pagination, TextField } from "@mui/material";
+import { Pagination} from "@mui/material";
 import { Link } from "react-router-dom";
  import { StorageContext } from "../MarketComponents/StorageContext";
 import PlainChart from "./PlainChart";
-
+import SearchField from "../MarketComponents/Search";
 
 const SavedBtn = ({ data }) => {
   const { saveCoin, allCoins, removeCoin } = useContext(StorageContext);
@@ -67,7 +67,6 @@ const SavedBtn = ({ data }) => {
 };
 
 
-
 const TableComponent = () => {
   const [search, setSearch] = useState("");
   let { cryptoData, currency } = useContext(CryptoContext);
@@ -88,17 +87,23 @@ const TableComponent = () => {
     );
   };
 
+
   return (
     <>
    
    
-      <TextField
-        label="Search for a cryptocurrency..."
-        variant="outlined"
-        style={{  margin:0 ,width: 200, zIndex: 2, marginTop:-40, marginLeft:90}}
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+    
+   <SearchField setSearch={setSearch} />
+
+   
+      {/* <TextField
+    
+      label="Search for a cryptocurrency..."
+      variant="outlined"
+      style={{ margin:0 ,mmaxwidth: 200, marginTop:-50, marginRight:10}}     
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+    /> */}
 
 
       {cryptoData ? (

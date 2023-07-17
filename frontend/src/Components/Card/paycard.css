@@ -1,25 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@500&family=Montserrat:wght@300;400;500&display=swap");
 
-/* body {
-  font-family: "Montserrat", sans-serif;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("../img/bg.jpg") no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
-  user-select: none;
-} */
 
-/* body::before {
-  content: "";
-  display: block;
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.3);
-} */
 
 .cardx {
   display: flex;
@@ -39,11 +20,11 @@
   animation: cardAnimation 1s alternate infinite;
 }
 
-@keyframes cardAnimation {
-  from {
+/* @keyframes cardAnimation {
+  from { */
     /* transform: translateY(-10px); */
-  }
-}
+  /* }
+} */
 
 .cardx::before {
   content: "";

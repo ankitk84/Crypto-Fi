@@ -46,6 +46,7 @@ import Websocketcode3 from './Websocketcode3';
 // import CoinData from './CoinData';
 import CoinsInfo from './CoinsInfo';
 import Trending from '../pages/Trending';
+import TechnicalIndicators from './TechnicalIndiactors';
 const FinalCoinsInfo = () => {
 
     let {id} = useParams();
@@ -213,6 +214,7 @@ const FinalCoinsInfo = () => {
       <button onClick={() =>{ setChartType('area'); toggleTab(1); }}>Area</button>
       <button onClick={() =>{ setChartType('bar'); toggleTab(1); }}>Bar</button>
       <button onClick={() => toggleTab(2)}>candle</button>
+      <button onClick={() => toggleTab(3)}>Indicators</button>
       </div>
       <div style={{display:"flex"}}>
 
@@ -223,6 +225,8 @@ const FinalCoinsInfo = () => {
                <div className='w-50'style={{marginInline:20, marginTop:20}} >
                  {toggleState === 1 &&  <FinalChart  id={data.id} days={days} type={type} chartType={chartType}/> }
                  {toggleState === 2 &&  <CandleChart id={data.id} days={days}/>}
+                  {toggleState === 3 &&  <TechnicalIndicators id={data.id} days={days} />}       
+
                 <Currencyconvert id={id}/>
               {/* <Link to={`/${data.id}/buy`}
                     className="btn btn-primary" style={{width:70, border:3, backgroundColor:"chocolate"}}  >Buy</Link>  

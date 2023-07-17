@@ -50,7 +50,7 @@ const Portfolio = () => {
   return (
     <>
     <div style={{color:"black", margin:50}}>
-    <div>Portfolio</div>
+    {/* <div>Portfolio</div> */}
     <Parentcomponent />
 
     {/* <p>{Portfolio.data._id}</p>  */}
