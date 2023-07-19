@@ -130,6 +130,13 @@ const TableComponent = () => {
                     <TableRow key={data.id}>
                       <TableCell className="d-flex" style={{marginTop:6}}>
                        <SavedBtn data={data} />
+                    
+                       <Link 
+                        //  to={`${data.id}` } 
+                        to={`/${data.id}`}
+                        //  onClick={() => handleLinkClick(data.id)}
+                        // onClick={() => navigate(`/Dashboard/${data.id}`)} 
+                         className="cursor-pointer">
                         <img
                           style={{
                             width: "2rem",
@@ -138,7 +145,8 @@ const TableComponent = () => {
                           }}
                           src={data.image}
                           alt={data.name}
-                        />
+                        /></Link>
+
                          <span>
                         {/* <Link
                          to={`/Dashboard/${data.id}` }
@@ -147,8 +155,8 @@ const TableComponent = () => {
                          className="cursor-pointer">
                           {data.symbol}
                         </Link> */}
-                        <Link style={{textAlign:"center", padding:15,marginTop:30}}
-                        //  to={`${data.id}` }
+                        <Link  style={{textAlign:"center", padding:15,marginTop:30}}
+                        //  to={`${data.id}` } 
                         to={`/${data.id}`}
                         //  onClick={() => handleLinkClick(data.id)}
                         // onClick={() => navigate(`/Dashboard/${data.id}`)} 
@@ -157,26 +165,58 @@ const TableComponent = () => {
                         </Link>
                         
                         
+                        
                       {/* <Link to={`/${data.id}`} onClick={() => navigate(`/${data.id}`)} className="cursor-pointer">
                       {data.symbol}
                     </Link> */}
                       </span>
+                      
                       </TableCell>
-                      <TableCell>{data.name} {data.id}</TableCell>
+                      
+                      <TableCell> 
+                      <Link
+                        //  to={`${data.id}` } 
+                        to={`/${data.id}`}
+                        //  onClick={() => handleLinkClick(data.id)}
+                        // onClick={() => navigate(`/Dashboard/${data.id}`)} 
+                         className="cursor-pointer">
+                          {data.id}
+                          </Link>
+                        
+                        </TableCell>
                       <TableCell align="right">
+                      <Link 
+                        //  to={`${data.id}` } 
+                        to={`/${data.id}`}
+                        //  onClick={() => handleLinkClick(data.id)}
+                        // onClick={() => navigate(`/Dashboard/${data.id}`)} 
+                         className="cursor-pointer">
                         {new Intl.NumberFormat("en-IN", {
                           style: "currency",
                           currency: currency,
                         }).format(data.current_price)}
+                        </Link>
                       </TableCell>
-                      <TableCell align="right">{data.total_volume}</TableCell>
+                      <TableCell align="right">  <Link  
+                        //  to={`${data.id}` } 
+                        to={`/${data.id}`}
+                        //  onClick={() => handleLinkClick(data.id)}
+                        // onClick={() => navigate(`/Dashboard/${data.id}`)} 
+                         className="cursor-pointer">
+                          {data.total_volume} </Link></TableCell>
                       <TableCell align="right"   style={{
                           color:
                           data.market_cap_change_percentage_24h > 0
                               ? "rgb(14,203,129)"
                               : "red",
                         }}>
-                        {data.market_cap_change_percentage_24h}%
+                           <Link 
+                        //  to={`${data.id}` } 
+                        to={`/${data.id}`}
+                        //  onClick={() => handleLinkClick(data.id)}
+                        // onClick={() => navigate(`/Dashboard/${data.id}`)} 
+                         className="cursor-pointer">
+                        {data.market_cap_change_percentage_24h}%</Link>
                       </TableCell>
                       <TableCell
                         align="right"
