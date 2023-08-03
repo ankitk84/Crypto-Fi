@@ -147,8 +147,8 @@ const Navbar = () => {
                     </li>
                   </ul>
                 </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/About">News</NavLink>
+                <li >
+                  <NavLink className="nav-link" to="/News">News</NavLink>
                 </li>
                 <li className="nav-item dropdown">
                   <NavLink className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

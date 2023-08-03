@@ -6,7 +6,7 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import { CryptoProvider } from './Components/MarketComponents/CryptoContext';
 import { StorageProvider } from './Components/MarketComponents/StorageContext';
-// import { CryptoNewsProvider } from './Components/MarketComponents/CryptoNewsContext';
+import { CryptoNewsProvider } from './Components/MarketComponents/CryptoNewsContext';
 import { TotalProvider } from './Components/MarketComponents/TotalContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,11 +14,11 @@ root.render(
     <CryptoProvider>
       <StorageProvider>
         <TotalProvider>
-      {/* <CryptoNewsProvider> */}
+      <CryptoNewsProvider>
     {/* <CryptoContext> */}
     <App />
     {/* </CryptoContext> */}
- {/* </CryptoNewsProvider> */}
+ </CryptoNewsProvider>
   </TotalProvider>
     </StorageProvider>
     </CryptoProvider>
