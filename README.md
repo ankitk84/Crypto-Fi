@@ -1,3 +1,4 @@
+Take a look at : https://main--crypto-fi.netlify.app/
 # Crypto-Fi
 The virtual trading crypto platform enables users to simulate cryptocurrency trading with real-time data and charts and news updates. It offers a risk-free environment for buying and selling virtual currencies, improving trading skills, and analyzing market trends.
 
