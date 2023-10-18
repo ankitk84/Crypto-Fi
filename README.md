@@ -70,3 +70,7 @@ Crypto-Fi <br>
 ├── .gitignore <br>
 ├── package-lock.json <br>
 ├── README.md <br>
+
+
+![image](https://github.com/ankitk84/Crypto-Fi/assets/79309319/4b268dd8-935c-49bd-8112-df6603831af3)
+
